@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+yarn.lock
+dist
+public
+node_nodules/
+# 如果專案是 Next.js 才需要配置
+.next
