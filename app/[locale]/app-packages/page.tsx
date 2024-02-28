@@ -27,7 +27,7 @@ export default function AppPackages() {
 	return (
 		<main className="flex h-full flex-col">
 			<div className="mx-auto h-full space-y-6 pt-6 capitalize md:w-2/3">
-				{/* <span className="text-xs">{`zeusworks > ${t('app_admin')}`}</span> */}
+				{/* <span className="text-xs">{`suotoo > ${t('app_admin')}`}</span> */}
 				<div className="flex items-center justify-between">
 					<p className="text-sm md:text-xl">{t('app_title')}</p>
 					<CreateAppDialog />

@@ -10,8 +10,8 @@ import { Nav, Navigation } from '@/components/widgets/nav';
 import initTranslations from '../i18n';
 
 export const metadata: Metadata = {
-	title: 'ZEUSVR dashboard',
-	description: 'Zeus VR dashboard',
+	title: 'Suotoo',
+	description: 'Suotoo',
 };
 
 const i18nNamespaces = ['home', 'country-code'];
