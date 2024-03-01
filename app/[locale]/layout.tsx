@@ -39,7 +39,7 @@ export default async function RootLayout({
 						locale={locale}
 						resources={resources}>
 						<Nav />
-						{user && <Navigation />}
+						{/* {user && <Navigation />} */}
 						<PageTransition>
 							<main className={`h-screen p-4 ${user ? 'pt-28' : 'pt-16'}`}>
 								{children}

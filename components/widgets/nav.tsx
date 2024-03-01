@@ -99,7 +99,7 @@ export function Navigation() {
 
 export function Nav() {
 	return (
-		<nav className="h-navHeight fixed flex w-full items-center justify-between bg-accent/20 px-4">
+		<nav className="h-navHeight fixed flex w-full items-center justify-between bg-accent px-4">
 			<Link className="text-2xl font-light" href="/">
 				<span className="font-black">SUOTOO</span>
 			</Link>
