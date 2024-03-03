@@ -24,6 +24,12 @@
 	"login_account": "account",
 	"login_password": "password",
 
+	"nav_suotoo":"SUOTOO",
+	"nav_about":"About us",
+	"nav_news":"News",
+	"nav_all_products":"All Prouducts",
+	"nav_contact_us":"Contact us",
+
 	"nav_tools": "tools",
 	"nav_sales_ow": "website sales trends",
 	"nav_dashboard": "dashboard",

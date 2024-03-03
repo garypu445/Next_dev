@@ -3,7 +3,7 @@
 export default function Home() {
 	return (
 		<div>
-            <span>SUOTOO ECOMERCE</span>
+            <span style={{color:"black"}}>SUOTOO ECOMERCE</span>
         </div>
 	);
 }

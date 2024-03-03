@@ -99,11 +99,11 @@ module.exports = {
 				'shadow-glow': 'shadow-glow 800ms ease-out infinite alternate',
 			},
 			width: {
-				icon: '1.2rem',
+				icon: '1.7rem',
 			},
 			height: {
-				icon: '1.2rem',
-				navHeight: '48px',
+				icon: '1.7rem',
+				navHeight: '55px',
 			},
 		},
 	},
