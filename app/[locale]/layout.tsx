@@ -45,8 +45,13 @@ export default async function RootLayout({
 							</div>
 							<div>
 								<PageTransition>
-									<main className={`h-screen p-4`}>
-										{children}
+									<main className={`h-screen`}>
+										<div className='container mx-auto lg:mx-auto 3xl:container-3xl'>
+											<div>
+												
+											</div>
+											{children}
+										</div>
 									</main>
 									<Toaster />
 								</PageTransition>
