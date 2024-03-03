@@ -15,6 +15,18 @@ import {
 	Label,
 } from '@/components/ui';
 
+import {
+	Drawer,
+	DrawerClose,
+	DrawerContent,
+	DrawerDescription,
+	DrawerFooter,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+  } from "@/components/ui/drawer"
+  
+
 export default function Home() {
 	const { t } = useTranslation();
 	const [formData, setFormData] = useState({
