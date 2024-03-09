@@ -49,7 +49,7 @@ export default function LanguageChanger() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="ghost">
+				<Button aria-label='Language' variant="ghost">
 					<GlobeIcon className="h-icon w-icon transition-all" />
 				</Button>
 			</DropdownMenuTrigger>

@@ -49,7 +49,7 @@ export default function MemberInfo() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="ghost">
+				<Button aria-label='Member' variant="ghost">
 					<PersonIcon className="h-icon w-icon transition-all" />
 				</Button>
 			</DropdownMenuTrigger>

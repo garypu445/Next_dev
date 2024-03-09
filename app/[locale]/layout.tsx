@@ -1,7 +1,6 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-
 import PageTransition from '@/components/page-transition';
 import ThemeProvider from '@/components/theme-provider';
 import TranslationsProvider from '@/components/translations-provider';
@@ -10,10 +9,19 @@ import { Nav, Navigation } from '@/components/widgets/nav';
 import initTranslations from '../i18n';
 import { Footer } from '@/components/widgets/footer';
 import { Breadcrumb } from '@/components/widgets/breadcrumb';
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: 'Suotoo',
-	description: 'Suotoo',
+	title: {
+		default:"Suotoo 索圖食品 虱目魚丸",
+		template: "%s - Suotoo 索圖食品 虱目魚丸"
+	},
+	description: 'Suotoo 索圖食品，冷凍食品、虱目魚貢丸、風味十足、香味、大人小孩都喜歡、營養',
+	icons:{
+		icon:'/favicon.ico'
+	}
 };
 
 const i18nNamespaces = ['home', 'country-code'];
@@ -49,9 +57,6 @@ export default async function RootLayout({
 								<PageTransition>
 									<main className={`h-screen`}>
 										<div className='container mx-auto lg:mx-auto 3xl:container-3xl'>
-											<div>
-												
-											</div>
 											{children}
 										</div>
 									</main>

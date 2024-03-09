@@ -103,7 +103,7 @@ export function Nav() {
 		<nav className="h-navHeight flex flex-row w-full items-center bg-accent">
 			<div className='basis-1/3'></div>
 			<div className="flex items-center basis-1/3 justify-center">
-				<Link className="text-2xl font-light"href="/">
+				<Link className="text-3xl font-light"href="/">
 					<span className="font-black">{t('nav_suotoo')}</span>
 				</Link>
 			</div>
