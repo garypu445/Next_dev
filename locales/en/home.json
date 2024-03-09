@@ -29,6 +29,8 @@
 	"nav_news":"News",
 	"nav_all_products":"All Prouducts",
 	"nav_contact_us":"Contact us",
+	"nav_new":"New",
+	"nav_gongmaru":"Gongmaru",
 
 	"nav_tools": "tools",
 	"nav_sales_ow": "website sales trends",
@@ -101,5 +103,12 @@
 	"config_create_success": "Config is created!",
 	"config_create_fail": "The same key already exists in the system",
 	"config_update_success": "Config is updated!",
-	"config_update_fail": "This key does not exist in the system"
+	"config_update_fail": "This key does not exist in the system",
+
+	"breadcrumb_home":"Home",
+	"breadcrumb_about":"About",
+	"breadcrumb_product":"Prouducts",
+	"breadcrumb_new":"New Arrival",
+	"breadcrumb_news":"News",
+	"breadcrumb_contact":"Contact"
 }

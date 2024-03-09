@@ -105,10 +105,12 @@ module.exports = {
 			},
 			width: {
 				icon: '1.7rem',
+				bc_icon: '1.2rem',
 			},
 			height: {
 				icon: '1.7rem',
 				navHeight: '55px',
+				bc_icon: '1.2rem',
 			},
 		},
 	},

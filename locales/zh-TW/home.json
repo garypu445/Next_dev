@@ -29,6 +29,8 @@
 	"nav_news":"最新消息",
 	"nav_all_products":"所有商品",
 	"nav_contact_us":"聯絡我們",
+	"nav_new":"新品上市",
+	"nav_gongmaru":"貢丸",
 
 	"footer_about":"關於我們",
 
@@ -103,5 +105,12 @@
 	"config_create_success": "配置已新增",
 	"config_create_fail": "系統中已存在相同主鍵",
 	"config_update_success": "配置已更新",
-	"config_update_fail": "系統中不存在此主鍵"
+	"config_update_fail": "系統中不存在此主鍵",
+
+	"breadcrumb_home":"首頁",
+	"breadcrumb_about":"關於我們",
+	"breadcrumb_product":"所有產品",
+	"breadcrumb_new":"最新產品",
+	"breadcrumb_news":"最新消息",
+	"breadcrumb_contact":"聯絡我們"
 }

@@ -9,6 +9,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Nav, Navigation } from '@/components/widgets/nav';
 import initTranslations from '../i18n';
 import { Footer } from '@/components/widgets/footer';
+import { Breadcrumb } from '@/components/widgets/breadcrumb';
 
 export const metadata: Metadata = {
 	title: 'Suotoo',
@@ -44,6 +45,7 @@ export default async function RootLayout({
 								<Navigation />
 							</div>
 							<div>
+								<Breadcrumb />
 								<PageTransition>
 									<main className={`h-screen`}>
 										<div className='container mx-auto lg:mx-auto 3xl:container-3xl'>
