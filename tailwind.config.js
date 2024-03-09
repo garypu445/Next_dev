@@ -12,7 +12,12 @@ module.exports = {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px',
+				'sm': '460px',
+				'md': '580px',
+				'lg': '680px',
+				'xl': '960px',
+				'2xl': '1000px',
+				'3xl': '1140px',
 			},
 		},
 		extend: {
@@ -99,11 +104,13 @@ module.exports = {
 				'shadow-glow': 'shadow-glow 800ms ease-out infinite alternate',
 			},
 			width: {
-				icon: '1.2rem',
+				icon: '1.7rem',
+				bc_icon: '1.2rem',
 			},
 			height: {
-				icon: '1.2rem',
-				navHeight: '48px',
+				icon: '1.7rem',
+				navHeight: '55px',
+				bc_icon: '1.2rem',
 			},
 		},
 	},

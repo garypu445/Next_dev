@@ -8,6 +8,8 @@ import TranslationsProvider from '@/components/translations-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { Nav, Navigation } from '@/components/widgets/nav';
 import initTranslations from '../i18n';
+import { Footer } from '@/components/widgets/footer';
+import { Breadcrumb } from '@/components/widgets/breadcrumb';
 
 export const metadata: Metadata = {
 	title: 'Suotoo',
@@ -28,7 +30,7 @@ export default async function RootLayout({
 
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="flex flex-col overflow-hidden">
+			<body className="flex flex-col">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="dark"
@@ -38,14 +40,27 @@ export default async function RootLayout({
 						namespaces={i18nNamespaces}
 						locale={locale}
 						resources={resources}>
-						<Nav />
-						{user && <Navigation />}
-						<PageTransition>
-							<main className={`h-screen p-4 ${user ? 'pt-28' : 'pt-16'}`}>
-								{children}
-							</main>
-							<Toaster />
-						</PageTransition>
+							<div>
+								<Nav />
+								<Navigation />
+							</div>
+							<div>
+								<Breadcrumb />
+								<PageTransition>
+									<main className={`h-screen`}>
+										<div className='container mx-auto lg:mx-auto 3xl:container-3xl'>
+											<div>
+												
+											</div>
+											{children}
+										</div>
+									</main>
+									<Toaster />
+								</PageTransition>
+							</div>
+							<div>
+								<Footer />
+							</div>
 					</TranslationsProvider>
 				</ThemeProvider>
 			</body>

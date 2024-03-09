@@ -15,6 +15,18 @@ import {
 	Label,
 } from '@/components/ui';
 
+import {
+	Drawer,
+	DrawerClose,
+	DrawerContent,
+	DrawerDescription,
+	DrawerFooter,
+	DrawerHeader,
+	DrawerTitle,
+	DrawerTrigger,
+  } from "@/components/ui/drawer"
+  
+
 export default function Home() {
 	const { t } = useTranslation();
 	const [formData, setFormData] = useState({
@@ -34,7 +46,7 @@ export default function Home() {
 	return (
 		<main className="flex h-full items-center justify-center text-white lg:justify-end">
 			<div className="flex w-full justify-center lg:w-1/2">
-				<Card className="flex w-full flex-col gap-6 md:max-w-md">
+				{/* <Card className="flex w-full flex-col gap-6 md:max-w-md">
 					<CardHeader>
 						<CardTitle className="text-xl tracking-wide">{t('login_title')}</CardTitle>
 					</CardHeader>
@@ -84,7 +96,7 @@ export default function Home() {
 							</Button>
 						</Link>
 					</CardFooter>
-				</Card>
+				</Card> */}
 			</div>
 		</main>
 	);
