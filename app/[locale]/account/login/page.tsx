@@ -1,10 +1,8 @@
 "use client";
-import { Metadata } from "next";
 import Link from 'next/link';
 import { ChangeEvent, useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { getServerSession } from "next-auth";
-import { options } from "../api/auth/[...nextauth]/options";
+import { Social } from '@/components/auth/social';
 
 import {
 	Button,
@@ -18,10 +16,9 @@ import {
 	Label,
 } from '@/components/ui';
 
-
-export default async function RegisterPage() {
+export default function LoginPage() {
     const { t } = useTranslation();
-    const session = await getServerSession(options)
+
 
     const [formData, setFormData] = useState({
 		account: '',
@@ -75,6 +72,9 @@ export default async function RegisterPage() {
                             className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                             {t('login_rememberMe')}
                         </Label>
+                    </div>
+                    <div>
+                        <Social></Social>
                     </div>
                 </CardContent>
                 <CardFooter className="flex flex-col items-end gap-2">
