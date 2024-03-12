@@ -1,14 +1,6 @@
-import { Metadata } from "next";
+"use client";
 import { useTranslation } from 'react-i18next';
 
-
-export const metadata: Metadata = {
-	
-	title: {
-		absolute: "News"
-	},
-	description: "News. 索圖食品最新的消息"
-}
 
 export default function NewsPage() {
 	return (

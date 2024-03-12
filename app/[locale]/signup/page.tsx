@@ -34,7 +34,7 @@ const published_countries: Record<Continent, string[]> = {
 	asia: ['all', 'JP', 'KR', 'TW', 'HK', 'SG', 'MY', 'PH'],
 };
 
-export default function Home() {
+export default function SignUpPage() {
 	const { t } = useTranslation(['signup', 'country-code']);
 	const router = useRouter();
 

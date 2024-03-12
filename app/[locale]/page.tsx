@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from 'next/link';
 import { ChangeEvent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -29,19 +29,6 @@ import {
 
 export default function Home() {
 	const { t } = useTranslation();
-	const [formData, setFormData] = useState({
-		account: '',
-		password: '',
-		rememberMe: false,
-	});
-
-	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-		const { value, name } = event.target;
-		setFormData((prevFormData) => ({
-			...prevFormData,
-			[name]: value,
-		}));
-	};
 
 	return (
 		<main className="flex">
