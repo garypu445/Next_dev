@@ -1,8 +1,8 @@
-"use client";
+"use server";
 import { useTranslation } from 'react-i18next';
 
 
-export default function ContactPage() {
+export default async function ContactPage() {
 	return (
 		<div>
             <span style={{color:"black"}}>SUOTOO Contact</span>

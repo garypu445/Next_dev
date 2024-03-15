@@ -9,9 +9,6 @@ import { Nav, Navigation } from '@/components/widgets/nav';
 import initTranslations from '../i18n';
 import { Footer } from '@/components/widgets/footer';
 import { Breadcrumb } from '@/components/widgets/breadcrumb';
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: {
