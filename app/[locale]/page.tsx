@@ -1,4 +1,4 @@
-"use server";
+"use client";
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
@@ -26,9 +26,11 @@ import {
 	DrawerTrigger,
   } from "@/components/ui/drawer"
 
-export default async function Home() {
-	// const { t } = useTranslation();
+import { GetNextTest } from '@/services/api';
 
+export default function Home() {
+	// const { t } = useTranslation();
+	const { data, isLoading, error, mutate } = GetNextTest()
 	return (
 		<main className="flex">
 			<div>

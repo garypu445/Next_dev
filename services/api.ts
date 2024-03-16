@@ -10,6 +10,7 @@ import {
 	IServerConfigParams,
 	IServerConfigResponse,
 } from './api-payload';
+import { any } from 'zod';
 
 export interface IErrorResponse {
 	response?: {
@@ -112,4 +113,18 @@ export const useDeleteServerConfig = () => {
 		},
 	);
 	return { trigger, data, isMutating, error };
+};
+
+
+export const GetNextTest = (arg?: Record<string, unknown>) => {
+	const { data, isLoading, error, mutate }: SWRResponse<IServerConfigResponse> = useSWR(
+		`/v1/next_test`,
+		(url) =>
+			fetcher({
+				url,
+				arg,
+				method:"POST"
+			}),
+	);
+	return { data, isLoading, error, mutate };
 };
