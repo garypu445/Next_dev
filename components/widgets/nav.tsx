@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -32,7 +31,6 @@ const menu = [
 export function Navigation() {
 	const { t } = useTranslation();
 	const pathname = usePathname();
-
 	return (
 		<nav className="h-navHeight top-12 z-50 flex w-full items-center justify-center bg-secondary">
 			<NavigationMenu>
