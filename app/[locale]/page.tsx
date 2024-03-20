@@ -30,7 +30,9 @@ import { GetNextTest } from '@/services/api';
 
 export default function Home() {
 	// const { t } = useTranslation();
-	const { data, isLoading, error, mutate } = GetNextTest()
+	const test = "123456"
+	const form = "343434"
+	const { data, isLoading, error, mutate } = GetNextTest({test, form})
 	return (
 		<main className="flex">
 			<div>
