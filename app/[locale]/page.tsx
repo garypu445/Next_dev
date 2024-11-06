@@ -26,17 +26,27 @@ import {
 	DrawerTrigger,
   } from "@/components/ui/drawer"
 
-import { GetNextTest } from '@/services/api';
+import { API_GET_USERID } from '@/services/api';
 
 export default function Home() {
 	// const { t } = useTranslation();
 	const test = "123456"
 	const form = "343434"
-	const { data, isLoading, error, mutate } = GetNextTest({test, form})
+	const { data, isLoading, error } = API_GET_USERID();
+
+	if (isLoading) {
+		return <div>載入中...</div>;
+	}
+
+	if (error) {
+		return <div>錯誤: {error.message}</div>;
+	}
+
 	return (
 		<main className="flex">
-			<div>
-				<span style={{ color: "black" }}>SUOTOO ECOMERCE HOME</span>
+			<div style={{ color: "black" }}>
+				<span>SUOTOO ECOMERCE HOME </span>
+				<span>CSR API取得資料:{data?.id}</span>
 			</div>
     	</main>
 	);

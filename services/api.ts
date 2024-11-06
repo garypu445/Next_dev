@@ -1,136 +1,22 @@
-import useSWR, { SWRResponse } from 'swr';
-import useSWRMutation from 'swr/mutation';
+// services/api.ts
+import useSWR, { SWRResponse } from 'swr';  // 引入 SWR
+import { fetcher } from './fetcher';        // 引入 fetcher
 
-import { fetcher } from '@/services/fetcher';
-import {
-	AppsConfigResponse,
-	IAppConfigParams,
-	IDeleteAppConfigParams,
-	IDeleteServerConfigParams,
-	IServerConfigParams,
-	IServerConfigResponse,
-} from './api-payload';
-import { any } from 'zod';
-import test from 'node:test';
-
-export interface IErrorResponse {
-	response?: {
-		data: {
-			error: string;
-		};
-		status: number;
-	};
+// 定義 API 響應數據結構
+export interface IApiResponse {
+  id: string;
 }
-export const useGetAppsConfig = () => {
-	const { data, isLoading, error, mutate }: SWRResponse<AppsConfigResponse> = useSWR(
-		`/v1/settings/apps/all`,
-		(url) =>
-			fetcher({
-				url,
-				method: 'GET',
-			}),
-	);
-	return { data, isLoading, error, mutate };
-};
-export const useCreateAppConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/apps/create`,
-		(url, { arg }: { arg: IAppConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
-export const useUpdateAppConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/apps/update`,
-		(url, { arg }: { arg: IAppConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
-export const useDeleteAppConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/apps/delete`,
-		(url, { arg }: { arg: IDeleteAppConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
-export const useGetServerConfig = () => {
-	const { data, isLoading, error, mutate }: SWRResponse<IServerConfigResponse> = useSWR(
-		`/v1/settings/server/all`,
-		(url) =>
-			fetcher({
-				url,
-				method: 'GET',
-			}),
-	);
-	return { data, isLoading, error, mutate };
-};
-export const useCreateServerConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/server/create`,
-		(url, { arg }: { arg: IServerConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
-export const useUpdateServerConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/server/update`,
-		(url, { arg }: { arg: IServerConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
-export const useDeleteServerConfig = () => {
-	const { trigger, isMutating, data, error } = useSWRMutation(
-		`/v1/settings/server/delete`,
-		(url, { arg }: { arg: IDeleteServerConfigParams }) => {
-			return fetcher({
-				url,
-				arg,
-			});
-		},
-	);
-	return { trigger, data, isMutating, error };
-};
 
+// 使用 SWR 的 hook 來發送 POST 請求並處理數據
+export const API_GET_USERID = () => {
+  const { data, error, isLoading }: SWRResponse<IApiResponse> = useSWR(
+    '/v1/next_dynamic_routes',  // API 路徑
+    (url: string) => fetcher({ url }),  // 使用 fetcher 發送 POST 請求，且不需要額外的參數
+  );
 
-export const GetNextTest = ({
-	test,
-	form,
-}: {
-	test: string | null;
-	form: string | null;
-}) => {
-	const { data, isLoading, error, mutate }: SWRResponse<IAppConfigParams> = useSWR(
-		`/v1/next_test`,
-		(url:string) =>
-			fetcher({
-				url,
-				arg:{test, form}
-			}),
-	);
-	return { data, isLoading, error, mutate };
+  return {
+    data,       // 返回數據
+    isLoading,  // 加載狀態
+    error,      // 錯誤狀態
+  };
 };
