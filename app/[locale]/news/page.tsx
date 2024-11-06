@@ -1,6 +1,8 @@
-'use client';
+"use server";
+import { useTranslation } from 'react-i18next';
 
-export default function Home() {
+
+export default async function NewsPage() {
 	return (
 		<div>
             <span style={{color:"black"}}>SUOTOO News</span>

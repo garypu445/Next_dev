@@ -39,7 +39,7 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyleNoFn =
-	'group inline-flex h-12 w-max items-center justify-center px-4 text-sm font-medium focus:outline-none disabled:pointer-events-none';
+	'group inline-flex h-12 w-max items-center justify-center px-4 text-base font-medium focus:outline-none disabled:pointer-events-none';
 
 const navigationMenuTriggerStyle = cva(navigationMenuTriggerStyleNoFn);
 

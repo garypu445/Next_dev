@@ -50,7 +50,7 @@ export default function Shopcart() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="ghost">
+				<Button aria-label='ShopCart' variant="ghost">
 					<IoCartOutline className="h-icon w-icon transition-all" />
 				</Button>
 			</DropdownMenuTrigger>

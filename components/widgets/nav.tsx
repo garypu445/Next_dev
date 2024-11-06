@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
@@ -32,7 +31,6 @@ const menu = [
 export function Navigation() {
 	const { t } = useTranslation();
 	const pathname = usePathname();
-
 	return (
 		<nav className="h-navHeight top-12 z-50 flex w-full items-center justify-center bg-secondary">
 			<NavigationMenu>
@@ -103,7 +101,7 @@ export function Nav() {
 		<nav className="h-navHeight flex flex-row w-full items-center bg-accent">
 			<div className='basis-1/3'></div>
 			<div className="flex items-center basis-1/3 justify-center">
-				<Link className="text-2xl font-light"href="/">
+				<Link className="text-3xl font-light"href="/">
 					<span className="font-black">{t('nav_suotoo')}</span>
 				</Link>
 			</div>
