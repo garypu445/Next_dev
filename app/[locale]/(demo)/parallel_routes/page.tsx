@@ -1,3 +1,4 @@
+'use server'
 import Profile from './@profile';  // Import Profile component
 import Posts from './@posts';
 

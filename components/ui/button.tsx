@@ -10,14 +10,13 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				primary: 'bg-primary text-primary-foreground shadow hover:bg-primary/80',
-				danger: 'bg-danger text-danger-foreground shadow-sm hover:bg-danger/80',
-				success: 'bg-success text-success-foreground shadow-sm hover:bg-success/80',
-				outline:
-					'border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground',
-				secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
-				ghost: '',
-				link: 'text-primary underline-offset-4 hover:underline',
+				primary: 'bg-primary text-white shadow hover:bg-primary/80',  // 修改這裡
+				danger: 'bg-danger text-white shadow-sm hover:bg-danger/80',  // 修改這裡
+				success: 'bg-success text-white shadow-sm hover:bg-success/80', // 修改這裡
+				outline: 'border border-input bg-transparent text-white shadow-sm hover:bg-accent hover:text-accent-foreground',  // 修改這裡
+				secondary: 'bg-secondary text-white shadow-sm hover:bg-secondary/80',  // 修改這裡
+				ghost: 'text-white',  // 修改這裡
+				link: 'text-white underline-offset-4 hover:underline',  // 修改這裡
 			},
 			size: {
 				default: 'h-8 rounded px-3 text-xs',

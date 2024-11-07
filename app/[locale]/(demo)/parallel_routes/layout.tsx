@@ -1,4 +1,3 @@
-// app/user/layout.tsx
 
 export default function UserLayout({
     children,

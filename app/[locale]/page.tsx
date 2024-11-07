@@ -1,4 +1,3 @@
-"use client";
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Head from 'next/head';
@@ -26,27 +25,20 @@ import {
 	DrawerTrigger,
   } from "@/components/ui/drawer"
 
-import { API_GET_USERID } from '@/services/api';
+import { useState } from 'react';
+import CartButton from './components/cartButton';
+import { fetcher } from '@/services/fetcher';
 
-export default function Home() {
+export default async function Home() {
 	// const { t } = useTranslation();
-	const test = "123456"
-	const form = "343434"
-	const { data, isLoading, error } = API_GET_USERID();
-
-	if (isLoading) {
-		return <div>載入中...</div>;
-	}
-
-	if (error) {
-		return <div>錯誤: {error.message}</div>;
-	}
+	const data = await fetcher({ url: '/v1/next_dynamic_routes' });
 
 	return (
 		<main className="flex">
 			<div style={{ color: "black" }}>
 				<span>SUOTOO ECOMERCE HOME </span>
-				<span>CSR API取得資料:{data?.id}</span>
+				<span>API取得資料:{data?.id}</span>
+				<CartButton serverData={data} />
 			</div>
     	</main>
 	);
