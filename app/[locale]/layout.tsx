@@ -12,7 +12,7 @@ import { Breadcrumb } from '@/components/widgets/breadcrumb';
 
 export const metadata: Metadata = {
 	title: {
-		default:"Suotoo 索圖食品 虱目魚丸",
+		default:"Suotoo 索圖食品",
 		template: "%s - Suotoo 索圖食品 虱目魚丸"
 	},
 	description: 'Suotoo 索圖食品，冷凍食品、虱目魚貢丸、風味十足、香味、大人小孩都喜歡、營養',
@@ -52,8 +52,8 @@ export default async function RootLayout({
 							<div>
 								<Breadcrumb />
 								<PageTransition>
-									<main className={`h-screen`}>
-										<div className='container mx-auto lg:mx-auto 3xl:container-3xl'>
+									<main>
+										<div className='container mx-auto lg:mx-auto 3xl:container-3xl min-h-screen'>
 											{children}
 										</div>
 									</main>
