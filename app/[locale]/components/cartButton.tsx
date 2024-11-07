@@ -24,7 +24,7 @@ export default function CartButton({ serverData }: CartButtonProps) {
         // 调用 API_UPDATE 获取更新结果
         const result = await fetcher({ url: '/v1/update' });
         // 这里可以触发 API_UPDATE
-        console.log("触发更新 API");
+        console.log("觸發更新 API");
 
         // 你也可以根据 `updateData` 来执行一些其他的逻辑
         if (result && result.code === 1) {
@@ -55,9 +55,9 @@ export default function CartButton({ serverData }: CartButtonProps) {
     return (
         <div>
             <div>
-                <button onClick={() => setCartCount(cartCount + 1)}>
+                <Button onClick={() => setCartCount(cartCount + 1)}>
                     Add to Cart ({cartCount})
-                </button>
+                </Button>
             </div>
             <div>
                 <span>SWR API取得資料: {data?.id}</span>
